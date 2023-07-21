@@ -1,22 +1,24 @@
 // Assignment code here
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numeric = "1234567890";
+var special = "!@#$%^&*()";
+
+
 function generatePassword() {
   var passwordLength = prompt("How long would you like your password to be?")
   // if the password is less then 8 or greater than 128, reprompt user
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Please try again")
-    return
+    return;
   }
   console.log(passwordLength)
   var passwordLowercase = confirm("Would you like lowercase values?")
-  //If true add lowercase values to the generator, if false exclude these values
-  var passwordUppercase = confirm("Would you like uppercase values?")
-  var passwordNumeric = confirm("Would you like your password to have numbers?")
-  var passwordSpecial = confirm("Would you like any special characters?")
+  if (passwordLowercase === true) {
+    return console.log(passwordLowercase)
+  }
+  var passwordUppercase = confirm("Would you like your password to have numbers?")
 }
-
-
-
-
 
 
 // Get references to the #generate element
