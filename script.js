@@ -1,7 +1,13 @@
 // Assignment code here
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
+console.log(lowercase[0])
+console.log(lowercase[lowercase.length -1])
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log(uppercase[0])
+console.log(uppercase[uppercase.length -1])
 var numeric = "1234567890";
+console.log(numeric[0])
+console.log(numeric[numeric.length -1])
 var special = "!@#$%^&*()";
 
 
@@ -13,12 +19,50 @@ function generatePassword() {
     return;
   }
   console.log(passwordLength)
-  var passwordLowercase = confirm("Would you like lowercase values?")
+  var characterPool = ""
+  var passwordLowercase = confirm("Would you like lowercase letters?")
+  console.log(passwordLowercase)
   if (passwordLowercase === true) {
-    return console.log(passwordLowercase)
+    //lowercase needs to be added to characterPool
+    characterPool += lowercase
+    console.log(characterPool)
   }
-  var passwordUppercase = confirm("Would you like your password to have numbers?")
+  var passwordUppercase = confirm("Would you like your password to have upercase letters?")
+  if (passwordUppercase === true) {
+    characterPool += uppercase
+    console.log(characterPool)
+
+  }
+  console.log(passwordUppercase)
+  var passwordNumeric = confirm("Would you like your password to have numbers?")
+  if (passwordNumeric === true) {
+    characterPool += numeric
+    console.log(characterPool)
+
+  }
+  console.log(passwordNumeric)
+  var passwordSpecial = confirm("Would you like your pass word to contain special characters?")
+  if(passwordSpecial === true) {
+    characterPool += special
+    console.log(characterPool)
+
+  }
+  console.log(passwordSpecial)
+  console.log(characterPool)
+if(characterPool === ""){
+  alert("Please try again")
+  return;
 }
+var finalPassword = "132lk4jsdfg;lgkj$@@#$"
+//iteralte up to n times  - passwordLength
+for (let i = 0; i < passwordLength; i++) {
+  console.log(i)  
+  //get a random letter from a string in javascript
+
+}
+return finalPassword
+}
+
 
 
 // Get references to the #generate element
