@@ -4,7 +4,6 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "1234567890"
 var special = "!@#$%^&*()";
 
-
 function generatePassword() {
   var passwordLength = prompt("How long would you like your password to be?")
   // if the password is less then 8 or greater than 128, reprompt user
@@ -48,17 +47,17 @@ if(characterPool === ""){
   return;
 }
 var finalPassword = ""
+var lengthOfPassword = passwordLength.length
 //iteralte up to n times  - passwordLength
 //get a random letter from a string in javascript
 for (var i=0  ; i < passwordLength; i++) {
-  finalPassword += characterPool.charAt(Math.floor(Math.random() * characterPool.length));
+  finalPassword += characterPool.charAt(Math.floor(Math.random() * passwordLength))
   return finalPassword;
 
 }
 
 
 }
-//if (length <8 || length >128) {alert("Please try again")}
 
 
 // Get references to the #generate element
