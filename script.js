@@ -1,13 +1,7 @@
 // Assignment code here
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
-console.log(lowercase[0])
-console.log(lowercase[lowercase.length -1])
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-console.log(uppercase[0])
-console.log(uppercase[uppercase.length -1])
-var numeric = "1234567890";
-console.log(numeric[0])
-console.log(numeric[numeric.length -1])
+var numeric = "1234567890"
 var special = "!@#$%^&*()";
 
 
@@ -53,16 +47,18 @@ if(characterPool === ""){
   alert("Please try again")
   return;
 }
-var finalPassword = "132lk4jsdfg;lgkj$@@#$"
+var finalPassword = ""
 //iteralte up to n times  - passwordLength
-for (let i = 0; i < passwordLength; i++) {
-  console.log(i)  
-  //get a random letter from a string in javascript
+//get a random letter from a string in javascript
+for (var i=0  ; i < passwordLength; i++) {
+  finalPassword += characterPool.charAt(Math.floor(Math.random() * characterPool.length));
+  return finalPassword;
 
 }
-return finalPassword
-}
 
+
+}
+//if (length <8 || length >128) {alert("Please try again")}
 
 
 // Get references to the #generate element
